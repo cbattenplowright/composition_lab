@@ -5,7 +5,7 @@ public class Motor implements IMotorised{
     private int fuel;
     private int hp;
 
-    public Motor(int fuelLevel, int hp) {
+    public Motor(int fuel, int hp) {
         this.fuel = fuel;
         this.hp = hp;
     }

@@ -2,6 +2,8 @@ import products.Product;
 import vehicles.*;
 import vehicles.land.Bicycle;
 import vehicles.land.Car;
+import vehicles.water.Speedboat;
+import vehicles.water.Kayak;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +31,23 @@ public class VehicleStore {
         System.out.println(car1.getPrice());
 
         // lab tests (water vehicle related)...
+
+        Speedboat speedboat = new Speedboat(100, 120, new Product("Speedy Boat", 1000, 4),
+        "pontoon",
+        new Motor(100, 120));
+        vehicles.add(speedboat);
+
+        speedboat.startEngine();
+        System.out.println(speedboat.getFuel());
+        System.out.println(speedboat.getHullType());
+
+        Kayak kayak = new Kayak (1, 2, new Product("Not Speedy Boat", 10, 10),
+                "pontoon");
+
+        vehicles.add(kayak);
+        System.out.println(kayak.getTitle());
+        System.out.println(kayak.getPrice());
+
 
     }
 }
