@@ -2,11 +2,11 @@ package vehicles;
 
 public class Motor implements IMotorised{
 
-    private int fuelLevel;
+    private int fuel;
     private int hp;
 
     public Motor(int fuelLevel, int hp) {
-        this.fuelLevel = fuelLevel;
+        this.fuel = fuel;
         this.hp = hp;
     }
 
@@ -19,7 +19,6 @@ public class Motor implements IMotorised{
     @Override
     public void stopEngine() {
         System.out.println("stop motor");
-
     }
 
     @Override
@@ -34,11 +33,11 @@ this.hp = hp;
 
     @Override
     public int getFuel() {
-        return this.fuelLevel;
+        return this.fuel;
     }
 
     @Override
     public void setFuel(int fuel) {
-this.fuelLevel = fuel;
+this.fuel = fuel;
     }
 }

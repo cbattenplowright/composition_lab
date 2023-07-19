@@ -1,6 +1,7 @@
-porackage icles.IMotorised;vehicles.wateroducts.IPtcudor;
+package vehicles.water;
 
-        importrp vehicles.water.IWaterVehicle;
+import products.IProduct;
+import vehicles.IMotorised;
 import vehicles.Vehicle;
 
 public class Speedboat extends Vehicle implements IWaterVehicle, IMotorised {
@@ -8,7 +9,7 @@ public class Speedboat extends Vehicle implements IWaterVehicle, IMotorised {
     private String hullType;
     private IMotorised motor;
 
-    public Speedboat(float weight, int maxSpeed, IProduct baseProduct, IMotorised motor) {
+    public Speedboat(float weight, int maxSpeed, IProduct baseProduct, String hullType, IMotorised motor) {
         super(weight, maxSpeed, baseProduct);
         this.hullType = hullType;
         this.motor = motor;
@@ -21,7 +22,7 @@ public class Speedboat extends Vehicle implements IWaterVehicle, IMotorised {
 
     @Override
     public void setHullType(String hullType) {
-        this.motor.setHullType(hullType);
+        this.hullType = hullType;
     }
 
     @Override
@@ -44,4 +45,13 @@ public class Speedboat extends Vehicle implements IWaterVehicle, IMotorised {
         this.motor.setHp(hp);
     }
 
+    @Override
+    public int getFuel() {
+        return this.motor.getFuel();
+    }
+
+    @Override
+    public void setFuel(int fuel) {
+        this.motor.setFuel(fuel);
+    }
 }
