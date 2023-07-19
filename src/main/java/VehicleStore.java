@@ -1,5 +1,7 @@
 import products.Product;
 import vehicles.*;
+import vehicles.air.Helicopter;
+import vehicles.air.Radar;
 import vehicles.land.Bicycle;
 import vehicles.land.Car;
 import vehicles.water.Speedboat;
@@ -49,5 +51,12 @@ public class VehicleStore {
         System.out.println(kayak.getPrice());
 
 
+//        lab tests for Air Vehicles
+        Helicopter helicopter = new Helicopter(400, 12, new Product("Marine One", 50_000, 2), new Engine(75, 350), new Radar(780));
+
+        vehicles.add(helicopter);
+        System.out.println(helicopter.getFrequency());
+        System.out.println(helicopter.getAltitude());
+        System.out.println(helicopter.getTitle());
     }
 }
